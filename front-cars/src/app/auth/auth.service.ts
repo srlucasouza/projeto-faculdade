@@ -11,7 +11,7 @@ export class AuthService {
   constructor() {}
 
   authenticate(password: string): Observable<boolean> {
-    const isAuthenticated = password === 'Carro@20248';
+    const isAuthenticated = password === 'Carro@2024';
     this.isAuthenticatedSubject.next(isAuthenticated);
     return this.isAuthenticatedSubject.asObservable();
   }
