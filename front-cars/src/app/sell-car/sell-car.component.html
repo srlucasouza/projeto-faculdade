@@ -1,0 +1,67 @@
+<br>
+<h2>Formulário de venda de veículo</h2>
+<br>
+<form class="sale-form" (ngSubmit)="submitForm()">
+    <div class="form-group">
+        <div class="label-inputs" for="tipo">Tipo de veículo:</div>
+        <select id="tipo" name="tipo" [(ngModel)]="car.tipo" (change)="onSelectTipo(car.tipo)" required>
+            <option value="" disabled selected>Informe o tipo de veículo</option>
+            <option *ngFor="let tipo of veiculosTipos" [value]="tipo">{{ tipo }}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <div class="label-inputs" for="marca">Marca:</div>
+        <select id="marca" name="marca" [(ngModel)]="car.marca" (change)="onSelectMarca(car.marca)" required>
+            <option value="" disabled selected>Informe a marca</option>
+            <option *ngFor="let marca of marcas" [value]="marca">{{ marca }}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <div class="label-inputs" for="modelo">Modelo:</div>
+        <select id="modelo" name="modelo" [(ngModel)]="car.modelo" required>
+            <option value="" disabled selected>Informe o modelo</option>
+            <option *ngFor="let modelo of modelos" [value]="modelo">{{ modelo }}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <div class="label-inputs" for="ano">Ano:</div>
+        <p-calendar [inputStyle]="{ width: '400px' }" class="custom-calendar" (onSelect)="formatDate($event)" dateFormat="yy"
+            [yearNavigator]="true" [yearRange]="yearRange" view="year" placeholder="Informe o ano"></p-calendar>
+        <input type="number" id="ano" name="ano" [(ngModel)]="car.ano" required />
+    </div>
+    <div class="form-group">
+        <div class="label-inputs" for="cor">Cor:</div>
+        <select id="cor" name="cor" [(ngModel)]="car.cor" required>
+            <option value="" disabled selected>Informe a cor</option>
+            <option *ngFor="let cor of coresCarros" [value]="cor">{{ cor }}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <div class="label-inputs" for="preco">Preço:</div>
+        <input type="text" id="preco" name="preco" [(ngModel)]="car.preco" currencyMask
+            [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }" class="price-input"
+            placeholder="Informe o preço">
+    </div>
+    <br>
+    <div class="form-group">
+        <div *ngIf="selectedFileName" class="label-inputs" for="imagem">Nome do arquivo:</div>
+        <div *ngIf="selectedFileName" class="file-info">
+            <span class="file-name">{{ selectedFileName }}</span>
+        </div>
+        <div class="file-input-wrapper">
+            <input type="text" name="img" [(ngModel)]="car.img" id="img" required />
+            <input type="file" id="imagem" name="imagem" (change)="onFileSelected($event)" accept="image/*"
+                class="file-input" />
+            <div *ngIf="!selectedFileName">
+                <label for="imagem" class="btn-file-input">Upload</label>
+            </div>
+            <div *ngIf="selectedFileName" class="button-container">
+                <button type="button" class="btn-remove" (click)="removeImage()">Apagar</button>
+            </div>
+            <br>
+            <div *ngIf="selectedFileName" class="button-container">
+                <button type="submit" class="btn-submit" id="sell">Enviar</button>
+            </div>
+        </div>
+    </div>
+</form>

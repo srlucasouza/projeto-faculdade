@@ -1,0 +1,57 @@
+<div *ngIf="!isAuthenticated">
+    <app-auth (passwordEntered)="handlePasswordEntered($event)"></app-auth>
+</div>
+
+<div *ngIf="isAuthenticated" class="container mt-4">
+    <h2>Atualizar informações dos veículos</h2>
+    <br>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="list-group">
+                <a *ngFor="let car of cars" class="list-group-item list-group-item-action" (click)="selectCar(car)"
+                    [class.active]="car === selectedCar">
+                    {{ car.marca }} {{ car.modelo }} ({{ car.cor }}-{{ car.ano }})
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6" *ngIf="selectedCar">
+            <div class="car-item">
+                <div class="car-details">
+                    <h3>{{ selectedCar.marca }} / {{ selectedCar.modelo }}</h3>
+                    <form (ngSubmit)="updateCar()">
+                        <div class="form-group">
+                            <label for="marca">Marca:</label>
+                            <input type="text" id="marca" name="marca" class="form-control"
+                                [(ngModel)]="selectedCar.marca" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="modelo">Modelo:</label>
+                            <input type="text" id="modelo" name="modelo" class="form-control"
+                                [(ngModel)]="selectedCar.modelo" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ano">Ano:</label>
+                            <input type="number" id="ano" name="ano" class="form-control" [(ngModel)]="selectedCar.ano"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cor">Cor:</label>
+                            <input type="text" id="cor" name="cor" class="form-control" [(ngModel)]="selectedCar.cor"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="preco">Preço:</label>
+                            <input type="text" id="preco" name="preco" [(ngModel)]="selectedCar.preco" currencyMask
+                                [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }" class="price-input" />
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Atualizar Veículo</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="alert alert-success mt-3" *ngIf="showSuccessAlert">
+        Veículo atualizado com sucesso!
+    </div>
+</div>

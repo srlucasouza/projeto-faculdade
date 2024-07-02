@@ -22,9 +22,13 @@
   "dependencies": {
     "@nestjs/common": "^10.0.0",
     "@nestjs/core": "^10.0.0",
+    "@nestjs/mapped-types": "*",
     "@nestjs/mongoose": "^10.0.6",
     "@nestjs/platform-express": "^10.0.0",
+    "@ngx-pwa/local-storage": "^18.0.0",
     "mongoose": "^8.4.1",
+    "ngx-webstorage": "^18.0.0",
+    "ngx-webstorage-service": "^5.0.0",
     "reflect-metadata": "^0.2.0",
     "rxjs": "^7.8.1"
   },

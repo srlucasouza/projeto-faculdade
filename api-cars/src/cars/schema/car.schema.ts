@@ -6,6 +6,10 @@ export class Car extends Document {
     @Prop({
         required: true
     })
+    tipo: string;
+    @Prop({
+        required: true
+    })
     marca: string;
     @Prop({
         required: true
@@ -19,6 +23,14 @@ export class Car extends Document {
         required: true
     })
     cor: string;
+    @Prop({
+        required: true
+    })
+    preco: number;
+    @Prop({
+        required: true
+    })
+    img: string;
 };
 
 export const CarSchema = SchemaFactory.createForClass(Car);

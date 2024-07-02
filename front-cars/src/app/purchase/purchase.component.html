@@ -1,0 +1,39 @@
+<div class="purchase-container">
+    <div class="card">
+        <div class="card-header">
+            <h2>Detalhes do Veículo</h2>
+        </div>
+        <div class="card-body">
+            <p><strong>Marca:</strong> {{ car?.marca }}</p>
+            <p><strong>Modelo:</strong> {{ car?.modelo }}</p>
+            <p><strong>Ano:</strong> {{ car?.ano }}</p>
+            <p><strong>Cor:</strong> {{ car?.cor }}</p>
+            <p><strong>Preço:</strong> {{ car?.preco | currency:'BRL':'symbol':'1.2-2' }}</p>
+        </div>
+    </div>
+    <br>
+    <form (ngSubmit)="submitPurchase()">
+        <div class="form-group">
+            <label for="telefone">Telefone de Contato:</label>
+            <input type="text" id="telefone" name="telefone" [(ngModel)]="telefone" appPhoneMask class="form-control" />
+        </div>        
+
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" [(ngModel)]="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="formaPagamento">Forma de Pagamento:</label>
+            <select id="formaPagamento" name="formaPagamento" [(ngModel)]="formaPagamento" required>
+                <option value="a vista">Á Vista</option>
+                <option value="financiamento">Financiamento</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn-submit">Finalizar Compra</button>
+    </form>
+    <div style="margin-top: 10px;">
+        <button type="button" class="btn btn-secondary" onclick="window.history.back();">Voltar</button>
+    </div>
+</div>

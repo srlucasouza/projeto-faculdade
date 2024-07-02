@@ -1,0 +1,189 @@
+.sale-form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 100px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+.price-input,
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: left !important;
+    color: #495057;
+    background-color: #ffffff;
+}
+
+button.btn-submit,
+.btn-file-input,
+.btn-remove,
+.btn-primary,
+.btn-buy {
+    display: inline-block;
+    background-color: #343a40;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+button.btn-submit:hover,
+.btn-file-input:hover,
+.btn-remove:hover,
+.btn-primary:hover,
+.btn-buy:hover {
+    background-color: #5fa797;
+}
+
+.file-input-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.file-input {
+    display: none;
+}
+
+.file-info {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.file-info span {
+    margin-right: 10px;
+}
+
+.container {
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+.row {
+    justify-content: flex-start;
+}
+
+.col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.car-item {
+    background-color: #d7d8d8;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.car-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
+.car-details h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #050505;
+    margin-bottom: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-group label {
+    color: #050505;
+}
+
+.btn-primary {
+    background-color: #16753e;
+    border-color: #16753e;
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 8px 16px;
+    margin-top: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #5fa797;
+    border-color: #5fa797;
+}
+
+.list-group {
+    margin-bottom: 20px;
+    width: 300px !important;
+}
+
+.list-group-item {
+    background-color: #d7d8d8;
+    color: #050505;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 1px;
+    margin-right: 1px;
+}
+
+.list-group-item:hover {
+    background-color: #5fa797;
+}
+
+.price-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: left !important;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #16753e;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #5fa797;
+}
+
+.btn-remove {
+    margin-left: 10px;
+}

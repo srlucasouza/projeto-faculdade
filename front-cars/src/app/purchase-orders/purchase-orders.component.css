@@ -1,0 +1,51 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+.info-cell {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-label {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.info-value {
+    margin-bottom: 8px;
+}
+
+.options-cell {
+    display: flex;
+    gap: 5px;
+    justify-content: flex-start;
+}
+
+.btn-option-accept {
+    background-color: #bae6bc;
+    border: 1px solid #4caf50;
+    font-size: 0.9em;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-option-recuse {
+    background-color: #ffdddd;
+    border: 1px solid #ff9999;
+    border-radius: 4px;
+    font-size: 0.9em;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.text-center {
+    text-align: center;
+}

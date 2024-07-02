@@ -9,10 +9,13 @@ export class CarsService {
     constructor (@InjectModel(Car.name) private carModel: Model <Car>){}
     async createCar(car: Car) {
         const newCar = new this.carModel({
+            tipo: car.tipo,
             marca: car.marca,
             modelo: car.modelo,
             ano: car.ano,
             cor: car.cor,
+            preco: car.preco,
+            img: car.img
         });
         return await newCar.save();
     }
@@ -33,4 +36,3 @@ export class CarsService {
         return this.carModel.findByIdAndDelete(id).exec();
     }
 }
- 

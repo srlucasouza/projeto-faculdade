@@ -1,0 +1,24 @@
+<br>
+<div class="car-inventory-container">
+  <div class="car-inventory">
+    <h2>Veículos em estoque</h2>
+    <div class="car-list">
+      <div *ngFor="let car of cars" class="car-item">
+        <div class="car-details">
+          <h3>{{ car.marca }} - {{ car.modelo }}</h3>
+          <p>Ano: {{ car.ano }}</p>
+          <p>Cor: {{ car.cor }}</p>
+          <p>Preço: {{ car.preco | currency:'R$':'symbol':'1.0-0' }}</p>
+          <div class="car-image">
+            <img *ngIf="car.img" [src]="car.img" alt="Imagem do carro" width="50%">
+            <img *ngIf="!car.img" src="https://portal.crea-sc.org.br/wp-content/uploads/2017/11/imagem-indisponivel-para-produtos-sem-imagem_15_5.jpg" alt="Imagem não disponível" width="20%">
+          </div>
+          <button class="btn-buy" (click)="comprarVeiculo(car)">Comprar o veículo</button>
+        </div>
+      </div>
+      <div *ngIf="cars.length === 0" class="no-cars">
+        <p>Nenhum veículo disponível.</p>
+      </div>
+    </div>
+  </div>
+</div>

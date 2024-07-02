@@ -1,0 +1,75 @@
+.auth-container {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    margin-bottom: 10px;
+}
+
+.password-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.password-input input {
+    flex: 1;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.password-input button {
+    padding: 8px;
+    background-color: #16753e;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.password-input button:hover {
+    background-color: #5fa797;
+}
+
+button.login-button {
+    padding: 8px 12px;
+    background-color: #16753e;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button.login-button:hover {
+    background-color: #5fa797;
+}
+
+button.login-button:focus {
+    outline: none;
+}
+
+.button-show-hide {
+    font-size: 10px;
+    color: #16753e;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.button-show-hide:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,112 @@
+.sale-form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 100px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.label-inputs {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+
+.price-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: left !important;
+}
+
+.btn-remove {
+    background-color: #ffdddd;
+    border: 1px solid #ff9999;
+    padding: 7px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.btn-submit {
+    background-color: #bae6bc;
+    border: 1px solid #4caf50;
+    padding: 7px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.btn-file-input {
+    background-color: #aecfeb;
+    border: 1px solid #69a0d1;
+    padding: 7px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#sell {
+    display: none;
+}
+
+#img {
+    display: none;
+}
+
+#ano {
+    display: none;
+}
+
+.file-input-wrapper {
+    position: static;
+    display: inline-block;
+}
+
+.file-input {
+    display: none;
+}
+
+.file-info span {
+    margin-right: 10px;
+}
+
+.file-info {
+    width: 100%; /* Define a largura do contêiner */
+    padding: 5px;
+    overflow: hidden; /* Esconde o conteúdo extra */
+    margin-bottom: 10px;
+}
+
+.file-name {
+    display: block; /* Garante que o elemento ocupe toda a largura do seu contêiner pai */
+    color: #007bff;
+    white-space: nowrap; /* Evita quebras de linha */
+    overflow: hidden; /* Esconde o conteúdo extra */
+    text-overflow: ellipsis; /* Mostra reticências (...) quando o texto ultrapassa o contêiner */
+}
+
+::ng-deep .custom-calendar .p-inputtext {
+    background-color: #fff;
+    color: #000000;
+    padding: 8px;
+    width: 100%;
+}

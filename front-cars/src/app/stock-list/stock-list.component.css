@@ -1,0 +1,83 @@
+.car-inventory-container {
+    margin-bottom: 20px;
+}
+
+.car-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.car-item {
+    flex: 0 1 calc(30% - 20px);
+    background-color: #dfdcdc;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 75px;
+}
+
+.car-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.car-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
+.car-details h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.car-details p {
+    font-size: 1.1rem;
+    color: #343a40;
+    margin-bottom: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.no-cars {
+    margin-top: 2rem;
+    text-align: center;
+    color: #343a40;
+}
+
+.btn-buy {
+    background-color: #16753e;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+.btn-buy:hover {
+    background-color: #5fa797;
+}
+
+.car-image {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.car-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}

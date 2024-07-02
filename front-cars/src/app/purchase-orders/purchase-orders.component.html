@@ -1,0 +1,51 @@
+<div *ngIf="!isAuthenticated">
+    <app-auth (passwordEntered)="authenticate($event)"></app-auth>
+</div>
+<div *ngIf="isAuthenticated">
+    <h4>Pedidos de compra</h4>
+    <br>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Telefone</th>
+                <th>Email</th>
+                <th>Forma de Pagamento</th>
+                <th>Véiculo Solicitado</th>
+                <th>Opções</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let order of purchaseOrders">
+                <td>
+                    <div class="info-cell">
+                        <div class="info-value">{{ formatarTelefone(order.telefone) }}</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="info-cell">
+                        <div class="info-value">{{ order.email }}</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="info-cell">
+                        <div class="info-value">{{ formatarPagamento(order.formaPagamento) }}</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="info-cell">
+                        <div class="info-value">{{ order.requestedCarModel }}</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="options-cell">
+                        <button class="btn btn-option-accept" (click)="acceptOrder(order._id, order.carId)">Aceitar</button>
+                        <button class="btn btn-option-recuse" (click)="rejectOrder(order._id)">Recusar</button>
+                    </div>
+                </td>
+            </tr>
+            <tr *ngIf="purchaseOrders.length === 0">
+                <td colspan="5" class="text-center">Nenhum pedido de compra encontrado.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

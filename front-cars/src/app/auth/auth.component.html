@@ -1,0 +1,11 @@
+<div class="auth-container">
+    <form (ngSubmit)="submitPassword()">
+        <div class="password-input">
+            <input type="{{ passwordVisible ? 'text' : 'password' }}" id="password" [(ngModel)]="password" name="password" required placeholder="Digite sua senha">
+            <button type="button" class="button-show-hide" (click)="togglePasswordVisibility()">
+                {{ passwordVisible ? 'Esconder' : 'Mostrar' }}
+            </button>
+        </div>
+        <button type="submit" class="login-button">Acesso</button>
+    </form>
+</div>
