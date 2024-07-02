@@ -11,9 +11,9 @@ body {
 
 .hero-text {
     text-align: center;
-    color: #333; /* Cor do texto */
-    padding: 20px; /* Espaçamento interno */
-    margin-bottom: 40px; /* Espaçamento inferior */
+    color: #333;
+    padding: 20px;
+    margin-bottom: 40px;
 }
 
 .hero-title {

@@ -90,18 +90,18 @@ select,
 }
 
 .file-info {
-    width: 100%; /* Define a largura do contêiner */
+    width: 100%;
     padding: 5px;
-    overflow: hidden; /* Esconde o conteúdo extra */
+    overflow: hidden;
     margin-bottom: 10px;
 }
 
 .file-name {
-    display: block; /* Garante que o elemento ocupe toda a largura do seu contêiner pai */
+    display: block;
     color: #007bff;
-    white-space: nowrap; /* Evita quebras de linha */
-    overflow: hidden; /* Esconde o conteúdo extra */
-    text-overflow: ellipsis; /* Mostra reticências (...) quando o texto ultrapassa o contêiner */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 ::ng-deep .custom-calendar .p-inputtext {
